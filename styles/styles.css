@@ -1,0 +1,468 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  height: 100vh;
+}
+main hr {
+  width: 100%;
+  margin-top: 2rem;
+}
+main .introduction {
+  width: 100%;
+  background: hsl(230deg, 100%, 99%) url(../image/pattern-circles.svg) no-repeat;
+  background-size: 35%;
+  background-position: center 3.5rem;
+  padding: 5rem 0 10rem;
+  text-align: center;
+  border-bottom-left-radius: 5rem;
+}
+main .introduction h1 {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  color: hsl(227deg, 35%, 25%);
+  margin-bottom: 0.5rem;
+}
+main .introduction p {
+  color: hsl(225deg, 20%, 60%);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+}
+main .pricing-component {
+  box-shadow: 0px 12px 21px 2px rgba(0, 0, 0, 0.2);
+  margin-top: -10rem;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  width: 85%;
+  padding: 2rem 2rem;
+}
+main .pricing-component .slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .pricing-component .slider p {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+main .pricing-component .slider input#price-range {
+  -webkit-appearance: none;
+  border-radius: 1rem;
+  width: 100%;
+  height: 0.6rem;
+  border: none;
+  background: linear-gradient(to right, hsl(174deg, 77%, 80%) 0%, hsl(174deg, 77%, 80%) 50%, hsl(224deg, 65%, 95%) 0%, hsl(224deg, 65%, 95%) 50%);
+}
+main .pricing-component .slider input#price-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background: hsl(174deg, 86%, 45%) url(../image/icon-slider.svg) no-repeat;
+  background-size: 70% 30%;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: 0px 18px 15px 0px hsl(174deg, 77%, 80%);
+}
+main .pricing-component .slider input#price-range::-webkit-slider-thumb:hover {
+  background: hsl(174deg, 88%, 51%) url(../image/icon-slider.svg) no-repeat;
+  background-size: 70% 30%;
+  background-position: center;
+}
+main .pricing-component .slider h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(227deg, 35%, 25%);
+  font-size: 2rem;
+}
+main .pricing-component .slider h2 .m-text {
+  margin-left: 1rem;
+  font-weight: normal;
+  color: hsl(225deg, 20%, 60%);
+  font-size: 1rem;
+}
+main .pricing-component .slider h2 #price {
+  color: hsl(227deg, 35%, 25%);
+  font-size: 2rem;
+  font-weight: 800;
+}
+main .pricing-component .billing {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .pricing-component .billing p {
+  text-align: center;
+  width: auto;
+  color: hsl(225deg, 20%, 60%);
+  font-size: 0.65rem;
+}
+main .pricing-component .billing .toggle {
+  background: hsl(223deg, 50%, 87%);
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 2rem;
+  padding: 0.5rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+main .pricing-component .billing .toggle button {
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+main .pricing-component .billing .toggle #year {
+  display: none;
+}
+main .pricing-component .billing .toggle:hover {
+  background-color: hsl(174deg, 86%, 45%);
+}
+main .pricing-component .billing .discount {
+  margin-right: -2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.4rem;
+  background-color: hsl(14deg, 92%, 95%);
+}
+main .pricing-component .billing .discount p {
+  font-size: 0.7rem;
+  color: hsl(15deg, 100%, 70%);
+}
+main .pricing-component .features {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .pricing-component .features .pros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .pricing-component .features p {
+  line-height: 1.5rem;
+  color: hsl(225deg, 20%, 60%);
+  font-size: 0.8rem;
+}
+main .pricing-component .features button {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.6rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  background-color: hsl(227deg, 35%, 25%);
+  color: hsl(226deg, 100%, 87%);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+main .pricing-component .features button:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 320px) {
+  main .pricing-component .billing .discount {
+    margin-right: -1rem;
+  }
+  main .pricing-component .billing .discount p {
+    height: 1rem;
+  }
+}
+@media screen and (min-width: 425px) {
+  main .pricing-component {
+    width: 75%;
+  }
+  main .pricing-component .billing .discount {
+    margin-right: -1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .introduction {
+    background-size: 20%;
+    background-position: center 2rem;
+  }
+  main .introduction h1 {
+    font-size: 1.4rem;
+  }
+  main .introduction div {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+  main .introduction div p {
+    font-size: 1rem;
+  }
+  main .pricing-component {
+    width: 80%;
+    padding: 3rem 2.5rem;
+  }
+  main .pricing-component .slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .pricing-component .slider input#price-range {
+    grid-column: 1/3;
+  }
+  main .pricing-component .slider h2 {
+    grid-column: 2;
+    grid-row: -1;
+    font-size: 2.5rem;
+  }
+  main .pricing-component .slider h2 .m-text {
+    margin-left: 1rem;
+    font-weight: normal;
+    color: hsl(225deg, 20%, 60%);
+    font-size: 1rem;
+  }
+  main .pricing-component .slider h2 #price {
+    color: hsl(227deg, 35%, 25%);
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  main .pricing-component .billing {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  main .pricing-component .billing p {
+    font-size: 0.8rem;
+  }
+  main .pricing-component .billing .discount {
+    margin-right: -7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  main .pricing-component .billing .discount p {
+    font-size: 0.8rem;
+  }
+  main .pricing-component .billing .discount::after {
+    font-size: 0.8rem;
+    content: "discount";
+    color: hsl(15deg, 100%, 70%);
+  }
+  main .pricing-component .features {
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .pricing-component .features .pros {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: unset;
+  }
+  main .pricing-component .features p {
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+  }
+  main .pricing-component .features button {
+    margin-top: unset;
+    padding: 0.6rem 5rem;
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .introduction {
+    background-size: 20%;
+    background-position: center 2rem;
+  }
+  main .introduction h1 {
+    font-size: 2rem;
+  }
+  main .introduction p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  main .pricing-component {
+    width: 60%;
+    padding: 3rem;
+  }
+  main .pricing-component .slider h2 {
+    font-size: 3rem;
+  }
+  main .pricing-component .slider h2 #price {
+    color: hsl(227deg, 35%, 25%);
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  main .pricing-component .slider .pageview {
+    font-size: 1rem;
+  }
+  main .pricing-component .billing {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  main .pricing-component .billing p {
+    font-size: 1rem;
+  }
+  main .pricing-component .features .pros {
+    align-items: unset;
+  }
+  main .pricing-component .features .pros p {
+    font-size: 1.25rem;
+  }
+  main .pricing-component .features button {
+    margin-top: unset;
+    padding: 0.8rem 4rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main hr {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  main .introduction {
+    border-bottom-left-radius: 15rem;
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    background-size: 15%;
+    background-position: center 4rem;
+  }
+  main .pricing-component {
+    margin-top: -13rem;
+    width: 45%;
+    padding: 3rem;
+  }
+  main .pricing-component .billing {
+    margin-top: 2.5rem;
+    gap: 1rem;
+  }
+  main .pricing-component .billing p {
+    font-size: 1.1rem;
+  }
+  main .pricing-component .billing .discount {
+    margin-right: -7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  main .pricing-component .billing .discount p {
+    font-size: 0.9rem;
+  }
+  main .pricing-component .billing .discount::after {
+    font-size: 0.9rem;
+    content: "discount";
+    color: hsl(15deg, 100%, 70%);
+  }
+  main .pricing-component .features .pros {
+    justify-content: flex-start;
+    align-items: unset;
+  }
+  main .pricing-component .features .pros p {
+    line-height: 3rem;
+    font-size: 1.1rem;
+  }
+  main .pricing-component .features button {
+    margin-top: unset;
+    padding: 0.8rem 4rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  main hr {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  main .introduction {
+    border-bottom-left-radius: 15rem;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background-size: 15%;
+    background-position: center 13rem;
+  }
+  main .introduction h1 {
+    font-size: 3rem;
+  }
+  main .introduction p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  main .pricing-component {
+    margin-top: -13rem;
+    max-width: 35%;
+    padding: 3rem;
+  }
+  main .pricing-component .slider {
+    padding: 3rem;
+  }
+  main .pricing-component .slider h2 {
+    font-size: 4rem;
+  }
+  main .pricing-component .slider h2 #price {
+    color: hsl(227deg, 35%, 25%);
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  main .pricing-component .slider .pageview {
+    font-size: 2rem;
+  }
+  main .pricing-component .billing {
+    margin-top: 2.5rem;
+    gap: 1rem;
+  }
+  main .pricing-component .billing p {
+    font-size: 2rem;
+  }
+  main .pricing-component .billing .discount {
+    margin-right: -7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  main .pricing-component .billing .discount p {
+    font-size: 1.5rem;
+  }
+  main .pricing-component .billing .discount::after {
+    font-size: 1.5rem;
+    content: "discount";
+    color: hsl(15deg, 100%, 70%);
+  }
+  main .pricing-component .features .pros {
+    justify-content: flex-start;
+    align-items: unset;
+  }
+  main .pricing-component .features .pros p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 3rem;
+    font-size: 1.5rem;
+  }
+  main .pricing-component .features .pros img {
+    width: 1.5rem;
+  }
+  main .pricing-component .features button {
+    margin-top: unset;
+    padding: 1rem 5rem;
+    font-size: 2rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+}
+body p {
+  color: hsl(225deg, 20%, 60%);
+}/*# sourceMappingURL=styles.css.map */

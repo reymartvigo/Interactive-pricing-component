@@ -1,0 +1,568 @@
+@use "variable";
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  height: 100vh;
+
+  hr {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .introduction {
+    width: 100%;
+    background: variable.$VeryPaleBlue url(../image/pattern-circles.svg)
+      no-repeat;
+    background-size: 35%;
+    background-position: center 3.5rem;
+    padding: 5rem 0 10rem;
+    text-align: center;
+
+    border-bottom-left-radius: 5rem;
+
+    h1 {
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      color: variable.$DarkDesaturatedBlue;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: variable.$GrayishBlue;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      line-height: 1.5rem;
+    }
+  }
+
+  .pricing-component {
+    -webkit-box-shadow: 0px 12px 21px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 12px 21px 2px rgba(0, 0, 0, 0.2);
+    margin-top: -10rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+
+    width: 85%;
+    padding: 2rem 2rem;
+
+    .slider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      p {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+
+      input#price-range {
+        -webkit-appearance: none;
+        border-radius: 1rem;
+        width: 100%;
+        height: 0.6rem;
+        border: none;
+        background: linear-gradient(
+          to right,
+          hsl(174, 77%, 80%) 0%,
+          hsl(174, 77%, 80%) 50%,
+          hsl(224, 65%, 95%) 0%,
+          hsl(224, 65%, 95%) 50%
+        );
+      }
+
+      input#price-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        background: variable.$StrongCyan url(../image/icon-slider.svg) no-repeat;
+        background-size: 70% 30%;
+        background-position: center;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 18px 15px 0px hsl(174, 77%, 80%);
+        box-shadow: 0px 18px 15px 0px hsl(174, 77%, 80%);
+      }
+
+      input#price-range::-webkit-slider-thumb:hover {
+        background: hsl(174, 88%, 51%) url(../image/icon-slider.svg) no-repeat;
+        background-size: 70% 30%;
+        background-position: center;
+      }
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: variable.$DarkDesaturatedBlue;
+        font-size: 2rem;
+
+        .m-text {
+          margin-left: 1rem;
+          font-weight: normal;
+          color: variable.$GrayishBlue;
+          font-size: 1rem;
+        }
+
+        #price {
+          color: variable.$DarkDesaturatedBlue;
+          font-size: 2rem;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .billing {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      p {
+        text-align: center;
+        width: auto;
+        color: variable.$GrayishBlue;
+        font-size: 0.65rem;
+      }
+
+      .toggle {
+        background: variable.$LightGrayishBlue2;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 2rem;
+        padding: 0.5rem 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        button {
+          background-color: #fff;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 1rem;
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        #year {
+          display: none;
+        }
+      }
+
+      .toggle:hover {
+        background-color: variable.$StrongCyan;
+      }
+
+      .discount {
+        margin-right: -2rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.2rem 0.4rem;
+        background-color: variable.$LightGrayishRed;
+
+        p {
+          font-size: 0.7rem;
+          color: variable.$LightRed;
+        }
+      }
+    }
+
+    .features {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .pros {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        line-height: 1.5rem;
+        color: variable.$GrayishBlue;
+        font-size: 0.8rem;
+      }
+
+      button {
+        cursor: pointer;
+        margin-top: 1.5rem;
+        padding: 0.6rem 2.5rem;
+        border-radius: 2rem;
+        border: none;
+        outline: none;
+        background-color: variable.$DarkDesaturatedBlue;
+        color: variable.$PaleBlue;
+        font-family: variable.$fontfamily;
+        font-weight: 800;
+        font-size: 0.85rem;
+      }
+
+      button:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    .pricing-component {
+      .billing {
+        .discount {
+          margin-right: -1rem;
+
+          p {
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  main {
+    .pricing-component {
+      width: 75%;
+      .billing {
+        .discount {
+          margin-right: -1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    .introduction {
+      background-size: 20%;
+      background-position: center 2rem;
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        gap: 0.2rem;
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .pricing-component {
+      width: 80%;
+      padding: 3rem 2.5rem;
+
+      .slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        input#price-range {
+          grid-column: 1/3;
+        }
+
+        h2 {
+          grid-column: 2;
+          grid-row: -1;
+          font-size: 2.5rem;
+
+          .m-text {
+            margin-left: 1rem;
+            font-weight: normal;
+            color: variable.$GrayishBlue;
+            font-size: 1rem;
+          }
+
+          #price {
+            color: variable.$DarkDesaturatedBlue;
+            font-size: 2.5rem;
+            font-weight: 800;
+          }
+        }
+      }
+
+      .billing {
+        margin-top: 2rem;
+        gap: 1rem;
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        .discount {
+          margin-right: -7rem;
+          padding: 0.2rem 0.5rem;
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        .discount::after {
+          font-size: 0.8rem;
+          content: "discount";
+          color: variable.$LightRed;
+        }
+      }
+
+      .features {
+        margin-top: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .pros {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: unset;
+        }
+
+        p {
+          line-height: 2rem;
+          letter-spacing: 0.5px;
+          font-size: 1rem;
+        }
+
+        button {
+          margin-top: unset;
+          padding: 0.6rem 5rem;
+
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    .introduction {
+      background-size: 20%;
+      background-position: center 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
+
+    .pricing-component {
+      width: 60%;
+      padding: 3rem;
+
+      .slider {
+        h2 {
+          font-size: 3rem;
+
+          #price {
+            color: variable.$DarkDesaturatedBlue;
+            font-size: 3rem;
+            font-weight: 800;
+          }
+        }
+
+        .pageview {
+          font-size: 1rem;
+        }
+      }
+
+      .billing {
+        margin-top: 2rem;
+        gap: 1rem;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .features {
+        .pros {
+          align-items: unset;
+          p {
+            font-size: 1.25rem;
+          }
+        }
+        button {
+          margin-top: unset;
+          padding: 0.8rem 4rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    hr {
+      width: 100%;
+      margin-top: 3rem;
+    }
+    .introduction {
+      border-bottom-left-radius: 15rem;
+      padding-top: 8rem;
+      padding-bottom: 15rem;
+      background-size: 15%;
+      background-position: center 4rem;
+    }
+
+    .pricing-component {
+      margin-top: -13rem;
+      width: 45%;
+      padding: 3rem;
+
+      .billing {
+        margin-top: 2.5rem;
+        gap: 1rem;
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        .discount {
+          margin-right: -7rem;
+          padding: 0.2rem 0.5rem;
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+        .discount::after {
+          font-size: 0.9rem;
+          content: "discount";
+          color: variable.$LightRed;
+        }
+      }
+
+      .features {
+        .pros {
+          justify-content: flex-start;
+          align-items: unset;
+          p {
+            line-height: 3rem;
+            font-size: 1.1rem;
+          }
+        }
+        button {
+          margin-top: unset;
+          padding: 0.8rem 4rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  main {
+    hr {
+      width: 100%;
+      margin-top: 3rem;
+    }
+    .introduction {
+      border-bottom-left-radius: 15rem;
+      padding-top: 20rem;
+      padding-bottom: 20rem;
+      background-size: 15%;
+      background-position: center 13rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+
+    .pricing-component {
+      margin-top: -13rem;
+      max-width: 35%;
+      padding: 3rem;
+
+      .slider {
+        padding: 3rem;
+
+        h2 {
+          font-size: 4rem;
+
+          #price {
+            color: variable.$DarkDesaturatedBlue;
+            font-size: 4rem;
+            font-weight: 800;
+          }
+        }
+
+        .pageview {
+          font-size: 2rem;
+        }
+      }
+
+      .billing {
+        margin-top: 2.5rem;
+        gap: 1rem;
+
+        p {
+          font-size: 2rem;
+        }
+
+        .discount {
+          margin-right: -7rem;
+          padding: 0.2rem 0.5rem;
+
+          p {
+            font-size: 1.5rem;
+          }
+        }
+        .discount::after {
+          font-size: 1.5rem;
+          content: "discount";
+          color: variable.$LightRed;
+        }
+      }
+
+      .features {
+        .pros {
+          justify-content: flex-start;
+          align-items: unset;
+          p {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            line-height: 3rem;
+            font-size: 1.5rem;
+          }
+          img {
+            width: 1.5rem;
+          }
+        }
+        button {
+          margin-top: unset;
+          padding: 1rem 5rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
